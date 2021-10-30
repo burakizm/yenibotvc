@@ -343,7 +343,7 @@ async def m_cb(b, cb):
             if callsmusic.queues.is_empty(chet_id):
                 callsmusic.pytgcalls.leave_group_call(chet_id)
 
-                await cb.message.edit("- artık oynatma listesi yok..\n- PGB music!")
+                await cb.message.edit("- artık oynatma listesi yok..\n- Şeker Müzik!")
             else:
                 callsmusic.pytgcalls.change_stream(
                     chet_id, callsmusic.queues.get(chet_id)["file"]
@@ -468,7 +468,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://te.legra.ph/file/5936afe970907f0fdc33a.jpg"
+        thumb_name = "https://telegra.ph/file/bfc7198787440999409bc.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
