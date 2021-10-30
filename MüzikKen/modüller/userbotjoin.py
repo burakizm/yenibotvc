@@ -25,7 +25,7 @@ from MusicKen.helpers.decorators import authorized_users_only, errors
 from MusicKen.services.callsmusic.callsmusic import client as USER
 
 
-@Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["asistan"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -34,7 +34,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Tambahkan saya sebagai admin grup Anda terlebih dahulu</b>",
+            "<b>Grupta şarkı çalmaya geldimm</b>",
         )
         return
 
@@ -52,8 +52,7 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-            "\n\nAtau tambahkan Assistant bot secara manual ke Grup Anda dan coba lagi.</b>",
+            f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} Asistan banlı olabilir lütfen banımı kaldırın ondan sonra ekleyin veya manuel olarak ekleyiniz</b>",
         )
         return
     await message.reply_text(
