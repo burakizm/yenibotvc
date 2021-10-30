@@ -21,34 +21,27 @@ logging.basicConfig(level=logging.INFO)
 @Client.on_message(filters.command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f""" **MERHABA ARKADAŞLAR HOŞGELDİNİZ 
-           Sahibim; @GOLGENDEIZIMVARR
-Asistan;  @Sancakbeyasistan
-Grubumuz; @sohbetsancakbeyi ** """,
+        f"""𝙼𝚎𝚛𝚑𝚊𝚋𝚊👋 𝙱𝚎𝚗 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙶𝚛𝚞𝚙𝚕𝚊𝚛ı𝚗𝚍𝚊 𝙱𝚊𝚗 𝚈𝚎𝚝𝚔𝚒𝚜𝚒 𝙾𝚕𝚖𝚊𝚍𝚊𝚗 𝙼ü𝚣𝚒𝚔 Ç𝚊𝚕𝚊𝚋𝚒𝚕𝚒𝚢𝚘𝚛𝚞𝚖. 𝙶𝚛𝚞𝚋𝚞𝚗𝚞𝚣𝚞𝚗 𝚜𝚎𝚜𝚕𝚒 𝚜𝚘𝚑𝚋𝚎𝚝𝚒𝚗𝚍𝚎 𝚖ü𝚣𝚒𝚔 ç𝚊𝚕𝚊𝚋𝚒𝚕𝚖𝚎𝚔 𝚒ç𝚒𝚗 𝙰𝚜𝚒𝚜𝚝𝚊𝚗ı𝚗 𝚐𝚛𝚞𝚋𝚞𝚗𝚞𝚣𝚍𝚊 𝚘𝚕𝚖𝚊𝚜ı 𝚐𝚎𝚛𝚎𝚔𝚒𝚛. 𝙰𝚂İ𝚂𝚃𝙰𝙽; @SekerMusicAsistan.""",
         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("⚔️ yardım", callback_data=f"help+1"),
-                    InlineKeyboardButton(
-                        "Gruplara ekle ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    ),
-                ],
+            [ 
                 [
                     InlineKeyboardButton(
-                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
+                        "📜 Kullanım Kılavuzu 📜", url="https://t.me/mussic_kanal/135")
+                  ],[
                     InlineKeyboardButton(
-                        "Kanal 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
+                        "🥳 Reklam hizmeti 🥳", url="https://t.me/beyfendi_00"
+                    )
+                ],[ 
+                    InlineKeyboardButton(
+                        "Sohbet Grubumuz 🎙️", url="https://t.me/sev_beni"
+                    )],
                 [
-                ],
+                    InlineKeyboardButton(text= "😇Sahibim😇", url = "https://t.me/beyfendi_00")
+                ]
             ]
         ),
-        reply_to_message_id=message.message_id,
+     disable_web_page_preview=True
     )
-
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
@@ -171,56 +164,3 @@ async def admincache(client, message: Message):
     )
 
 
-@Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
-async def ghelp(_, message: Message):
-    await message.reply_text(
-        """
-**🔰 Perintah**
-      
-**=>> Memutar Lagu 🎧**
-
-• /oynat (şarkı adı) - İstediğiniz şarkıyı youtube üzerinden çalmak için
-• /ytplay (şarkı adı) - İstediğiniz şarkıyı youtube üzerinden çalmak için
-• /yt (şarkı adı) - İstediğiniz şarkıyı youtube üzerinden çalmak için
-• /p (şarkı adı) - İstediğiniz şarkıyı youtube üzerinden çalmak için
-• /lplay - gc'deki yanıtlanan şarkılar vcg'de otomatik olarak oynatılacaktır
-• /player: Oynatıcı ayarları menüsünü açın
-• /atla: Geçerli parçayı atlar
-• /durdur: Parçayı duraklat
-• /devam: Duraklatılan bir parçayı devam ettirir
-• /son: Medya oynatmayı durdurur
-• /current: Çalmakta olan parçayı görüntüler
-• /playlist: Bir çalma listesi görüntüler
-Komut /oynat /atla /durdur /devam /son Hariç Tüm Komutlar Yalnızca Grup Yöneticileri İçin Kullanılabilir
-**==>>Şarkıyı İndir **
-• /bul [şarkı adı]: youtube'dan şarkı sesini indirin      
-
-**=>> Saluran Music Play 🛠**
-      
-⚪️ Hanya untuk admin channel tertaut:
-      
-• /cplay (nama lagu) - putar lagu yang Anda minta
-• /cplaylist - Tampilkan daftar yang sedang diputar
-• /cccurrent - Tampilkan sedang diputar
-• /cplayer - buka panel pengaturan pemutar musik
-• /cpause - jeda pemutaran lagu
-• /cresume - melanjutkan pemutaran lagu
-• /cskip - putar lagu berikutnya
-• /cend - hentikan pemutaran musik
-• /userbotjoinchannel - undang asisten ke obrolan channel Anda""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton(text="🔵 sahip", url=f"t.me/By_Jilet")],
-                [
-                    InlineKeyboardButton(
-                        text="👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        text="kanal 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                 [
-                ],
-            ]
-        ),
-    )
