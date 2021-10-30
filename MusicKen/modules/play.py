@@ -32,7 +32,7 @@ aiohttpsession = aiohttp.ClientSession()
 chat_id = None
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 
-useer = "ONLİNE MUSİC"
+useer = "Şeker Müzik "
 
 
 def cb_admin_check(func: Callable) -> Callable:
@@ -144,7 +144,7 @@ async def playlist(client, message):
                     ),
                 ],
                 [
-                    InlineKeyboardButton(text="🗑 ᴛᴜᴛᴜᴘ", callback_data="cls"),
+                    InlineKeyboardButton(text="🗑 SİL", callback_data="cls"),
                 ],
             ]
         ),
@@ -237,7 +237,7 @@ async def p_cb(b, cb):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="🗑 ᴛᴜᴛᴜᴘ", callback_data="cls"),
+                        InlineKeyboardButton(text="🗑 SİL", callback_data="cls"),
                     ],
                 ]
             ),
@@ -251,7 +251,7 @@ async def p_cb(b, cb):
 async def m_cb(b, cb):
     global que
     if (
-        cb.message.chat.title.startswith("PGB Music: ")
+        cb.message.chat.title.startswith("Şeker Music Bot ")
         and chat.title[14:].isnumeric()
     ):
         chet_id = int(chat.title[13:])
@@ -463,12 +463,12 @@ async def play(_, message: Message):
                 ],
                 [
                  ],
-                [InlineKeyboardButton(text="🗑 ᴛᴜᴛᴜᴘ", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/bfc7198787440999409bc.jpg"
+        thumb_name = "https://te.legra.ph/file/5936afe970907f0fdc33a.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -514,7 +514,7 @@ async def play(_, message: Message):
                 ],
                 [
                 ],
-                [InlineKeyboardButton(text="🗑 ᴛᴜᴛᴜᴘ", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -558,7 +558,7 @@ async def play(_, message: Message):
                 ],
                 [
                 ],
-                [InlineKeyboardButton(text="🗑 ᴛᴜᴛᴜᴘ", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -598,7 +598,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"🏷 **başlık:** [{title[:60]}]({url})\n⏱ **süre:** {duration}\n🔊 **durum:** Sedang Memutar\n"
+            caption=f"🏷 **başlık:** [{title[:60]}]({url})\n⏱ **süre:** {duration}\n🔊 **durum:** oynatılıyor\n"
             + f"🎧 **Talep eden:** {message.from_user.mention}",
         )
         return await lel.delete()
@@ -621,7 +621,7 @@ async def stream(_, message: Message):
             ],
             [
             ],
-            [InlineKeyboardButton(text="🗑 ᴛᴜᴛᴜᴘ", callback_data="cls")],
+            [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
         ]
     )
 
