@@ -456,14 +456,11 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 ᴘʟᴀʏʟɪꜱᴛ", callback_data="playlist"),
                     InlineKeyboardButton(
                         "💬 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                ],
-                [
-                 ],
-                [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
+                    )
+                ]
+               
             ]
         )
         file_name = get_file_name(audio)
@@ -507,14 +504,11 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 ᴘʟᴀʏʟɪꜱᴛ", callback_data="playlist"),
                     InlineKeyboardButton(
                         "💬 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                ],
-                [
-                ],
-                [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
+                    )
+                ]
+                
             ]
         )
         requested_by = message.from_user.first_name
@@ -616,12 +610,8 @@ async def stream(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 ᴘʟᴀʏʟɪꜱᴛ", callback_data="playlist"),
                 InlineKeyboardButton("💬 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"),
-            ],
-            [
-            ],
-            [InlineKeyboardButton(text="🗑 SİL", callback_data="cls")],
+            ]
         ]
     )
 
@@ -652,7 +642,7 @@ async def stream(_, message: Message):
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
-            photo=f"https://te.legra.ph/file/5936afe970907f0fdc33a.jpg",
+            photo=f"https://telegra.ph/file/e4fda0b72f7e2575dec59.jpg",
             caption=f"🔊 **istediğiniz şarkı** `{position}`",
             reply_markup=keyboard,
         )
@@ -660,7 +650,7 @@ async def stream(_, message: Message):
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-            photo=f"https://te.legra.ph/file/5936afe970907f0fdc33a.jpg",
+            photo=f"https://telegra.ph/file/e4fda0b72f7e2575dec59.jpg",
             reply_markup=keyboard,
             caption="🎧 **Talep edilen şarkı çalınıyor :** {}!".format(
                 message.from_user.mention()
