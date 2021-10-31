@@ -465,7 +465,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/bfc7198787440999409bc.jpg"
+        thumb_name = "https://telegra.ph/file/79b033ef15014f1689643.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -642,7 +642,7 @@ async def stream(_, message: Message):
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
-            photo=f"https://telegra.ph/file/e4fda0b72f7e2575dec59.jpg",
+            photo=f"https://telegra.ph/file/79b033ef15014f1689643.jpg",
             caption=f"🔊 **istediğiniz şarkı** `{position}`",
             reply_markup=keyboard,
         )
@@ -650,7 +650,7 @@ async def stream(_, message: Message):
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-            photo=f"https://telegra.ph/file/e4fda0b72f7e2575dec59.jpg",
+            photo=f"https://telegra.ph/file/79b033ef15014f1689643.jpg",
             reply_markup=keyboard,
             caption="🎧 **Talep edilen şarkı çalınıyor :** {}!".format(
                 message.from_user.mention()
