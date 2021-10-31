@@ -26,7 +26,7 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "🎶 beni gurubuna ekle🎶", url="https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "🎶 beni gurubuna ekle🎶", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                   ],[
                     InlineKeyboardButton(
                         "📜 Kullanım Kılavuzu 📜", url="https://t.me/mussic_kanal/135"
