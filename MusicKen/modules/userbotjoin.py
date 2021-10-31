@@ -59,8 +59,6 @@ async def addchannel(client, message):
         f"<b>{user.first_name} 🛑 Zaman Aşımı Hatası 🛑 
  ŞekerMusicAsistan userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun.Yada @SekerMusicAsistan Hesabını Gruba Kendin Ekle</b>",
     )
-
-
 @USER.on_message(filters.group & filters.command(["userbotleave"]))
 @authorized_users_only
 async def rem(USER, message):
