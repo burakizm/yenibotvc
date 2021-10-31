@@ -35,7 +35,7 @@ async def durdur(_, message: Message):
         await message.reply_text(" Şeker Müsic Bot🎶❗ **şuan seste oynatılan bir music bulunamadı!**")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text(" Şeker Müsic Bot🎶▶️ **Duraklatıldı!**")
+        await message.reply_text(" Şeker Music Bot :- 🤐 Durduruldu**")
 
 
 @Client.on_message(command(["devam", f"resume@{BOT_USERNAME}"]) & other_filters)
@@ -48,7 +48,7 @@ async def devam(_, message: Message):
         await message.reply_text(" Şeker Müsic Bot🎶❗ **oynatılacak şarkı bulunamadı!**")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text(" Şeker Müsic Bot🎶⏸ **Devam ettirildi!**")
+        await message.reply_text(" Şeker Music Bot :- 🥳 Devam Ediyor!")
 
 
 @Client.on_message(command(["son", f"end@{BOT_USERNAME}"]) & other_filters)
@@ -64,7 +64,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("Şeker Müsic Bot🎶❌ **şarkı sonlandırıldı!**")
+        await message.reply_text("Miss Music Bot :- ❌ **Bitti!**")
 
 
 @Client.on_message(command(["atla", f"skip@{BOT_USERNAME}"]) & other_filters)
@@ -73,7 +73,7 @@ async def atla(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("Şeker Müsic Bot🎶❗ **Atlatılanacak şarkı bulunamadı!**")
+        await message.reply_text("**Şeker Music  Bot :- 🙄 Atlamak için hiçbir şey oynamıyor!**")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -84,7 +84,7 @@ async def atla(_, message: Message):
                 chat_id, callsmusic.queues.get(chat_id)["file"]
             )
 
-        await message.reply_text("Şeker Müsic Bot🎶⏩ **şarkı atlatıldı!**")
+        await message.reply_text("Şeker Music Bot :- 😬Bir Sonraki Müziğe Atlandı!")
 
 
 @Client.on_message(filters.command(["admincache", f"admincache@{BOT_USERNAME}"]))
