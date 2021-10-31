@@ -56,7 +56,10 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-        f"<b>{user.first_name} berhasil bergabung dengan obrolan Anda</b>",
+        f"<b>{user.first_name} 🛑 Zaman Aşımı Hatası 🛑 
+ ŞekerMusicAsistan userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun.
+
+ Yada @SekerMusicAsistan Hesabını Gruba Kendin Ekle</b>",
     )
 
 
