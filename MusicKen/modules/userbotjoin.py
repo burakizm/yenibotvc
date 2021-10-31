@@ -51,13 +51,12 @@ async def addchannel(client, message):
         )
     except Exception as e:
         print(e)
-        await message.reply_text("
+        await message.reply_text(
             f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} Asistan banlı olabilir lütfen banımı kaldırın ondan sonra ekleyin veya manuel olarak ekleyiniz</b>",
         )
         return
     await message.reply_text(
-        f"<b>{user.first_name} 🛑 Zaman Aşımı Hatası 🛑 
- ŞekerMusicAsistan userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun.Yada @SekerMusicAsistan Hesabını Gruba Kendin Ekle</b>",
+        f"<b>{user.first_name} 🛑 Zaman Aşımı Hatası 🛑 ŞekerMusicAsistan userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun.Yada @SekerMusicAsistan Hesabını Gruba Kendin Ekle</b>",
     )
 @USER.on_message(filters.group & filters.command(["userbotleave"]))
 @authorized_users_only
