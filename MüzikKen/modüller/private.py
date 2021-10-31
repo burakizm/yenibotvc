@@ -26,17 +26,17 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "📜 Kullanım Kılavuzu 📜", url="https://t.me/mussic_kanal/135")
+                        "🎶 beni gurubuna ekle🎶", url="https://t.me/{BOT_USERNAME}?startgroup=true")
                   ],[
                     InlineKeyboardButton(
-                        "🥳 Reklam hizmeti 🥳", url="https://t.me/beyfendi_00"
+                        "📜 Kullanım Kılavuzu 📜", url="https://t.me/mussic_kanal/135"
                     )
                 ],[ 
                     InlineKeyboardButton(
                         "Sohbet Grubumuz 🎙️", url="https://t.me/sev_beni"
                     )],
                 [
-                    InlineKeyboardButton(text= "😇Sahibim😇", url = "https://t.me/beyfendi_00")
+                    InlineKeyboardButton(text= "😇Reklam hizmeti😇", url = "https://t.me/Kalbimsin_35")
                 ]
             ]
         ),
